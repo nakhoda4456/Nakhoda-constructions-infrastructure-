@@ -6,138 +6,279 @@
 
     <title>Nakhoda Constructions | Meri Mitti • Meri Zameen • Mera Ghar</title>
 
+    <meta name="description" content="Nakhoda Constructions - Construction, planning, supervision, civil works and infrastructure services in Tripura.">
+    <meta name="keywords" content="Nakhoda Constructions, construction Tripura, Agartala construction, house construction, civil contractor, building construction">
+    <meta name="author" content="Nakhoda Constructions">
+
     <style>
         :root {
-            --primary: #1a365d;
-            --secondary: #d69e2e;
-            --dark: #2d3748;
-            --light: #f7fafc;
+            --primary: #12355b;
+            --primary-dark: #0b2540;
+            --secondary: #d6a52f;
+            --secondary-light: #f4d47b;
+            --dark: #1f2937;
+            --gray: #64748b;
+            --light: #f5f7fa;
             --white: #ffffff;
+            --border: #e2e8f0;
             --whatsapp: #25D366;
             --email: #EA4335;
+            --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
         }
 
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
-            background-color: var(--light);
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--light);
             color: var(--dark);
-            line-height: 1.6;
+            line-height: 1.7;
         }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* HEADER */
 
         header {
-            background-color: var(--primary);
+            background:
+                linear-gradient(rgba(9, 35, 61, 0.94), rgba(9, 35, 61, 0.97)),
+                linear-gradient(135deg, #12355b, #071a2d);
+
             color: var(--white);
-            padding: 2.5rem 1rem;
             text-align: center;
+            padding: 55px 20px 45px;
+            position: relative;
+            overflow: hidden;
         }
 
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
+        header::after {
+            content: "";
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border: 1px solid rgba(214,165,47,0.25);
+            border-radius: 50%;
+            right: -120px;
+            top: -120px;
         }
 
-        header p.tagline {
-            color: var(--secondary);
-            font-weight: 600;
-            letter-spacing: 1px;
-            margin-bottom: 1rem;
+        .brand {
+            position: relative;
+            z-index: 2;
         }
 
-        header h2.hero-title {
-            color: var(--white);
-            font-size: 1.5rem;
-            margin-top: 1rem;
-            border-bottom: none;
+        .brand h1 {
+            font-size: clamp(2.2rem, 6vw, 4rem);
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+            font-weight: 800;
         }
+
+        .tagline {
+            color: var(--secondary-light);
+            font-weight: 700;
+            letter-spacing: 2px;
+            font-size: 1rem;
+            margin-bottom: 22px;
+        }
+
+        .hero-title {
+            font-size: clamp(1.3rem, 4vw, 2rem);
+            line-height: 1.4;
+            margin-bottom: 18px;
+        }
+
+        .hero-subtitle {
+            max-width: 750px;
+            margin: auto;
+            color: #dbe7f3;
+            font-size: 1.05rem;
+        }
+
+        /* NAVIGATION */
+
+        nav {
+            background: var(--white);
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 6px;
+            padding: 10px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: var(--primary);
+            font-weight: 700;
+            padding: 8px 13px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+        }
+
+        nav a:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* LANGUAGE */
 
         .lang-switcher {
             display: flex;
             justify-content: center;
-            gap: 1rem;
-            margin-top: 1.5rem;
+            gap: 8px;
+            margin-top: 28px;
             flex-wrap: wrap;
+            position: relative;
+            z-index: 2;
         }
 
         .lang-btn {
             background: transparent;
-            color: var(--white);
-            border: 1px solid rgba(255,255,255,0.4);
-            padding: 0.4rem 1rem;
-            border-radius: 4px;
+            color: white;
+            border: 1px solid rgba(255,255,255,0.45);
+            padding: 8px 15px;
+            border-radius: 25px;
             cursor: pointer;
             font-size: 0.9rem;
-            transition: all 0.2s ease;
+            transition: 0.2s;
         }
 
         .lang-btn:hover,
         .lang-btn.active {
-            background-color: var(--secondary);
-            color: var(--primary);
+            background: var(--secondary);
+            color: var(--primary-dark);
             border-color: var(--secondary);
-            font-weight: bold;
+            font-weight: 700;
         }
 
+        /* CONTAINER */
+
         .container {
-            max-width: 1100px;
-            margin: 2rem auto;
-            padding: 0 1rem;
+            width: min(1150px, 92%);
+            margin: auto;
         }
 
         .intro {
             text-align: center;
-            margin-bottom: 3rem;
-            font-size: 1.2rem;
-            color: #4a5568;
+            max-width: 900px;
+            margin: 45px auto;
+            font-size: 1.15rem;
+            color: var(--gray);
         }
 
-        h2 {
-            color: var(--primary);
-            border-bottom: 3px solid var(--secondary);
-            padding-bottom: 0.5rem;
-            margin: 3rem 0 1.5rem;
+        /* SECTION */
+
+        section {
+            padding: 25px 0;
+            scroll-margin-top: 70px;
         }
+
+        .section-title {
+            color: var(--primary);
+            font-size: clamp(1.7rem, 4vw, 2.3rem);
+            margin-bottom: 28px;
+            position: relative;
+            padding-bottom: 12px;
+        }
+
+        .section-title::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 65px;
+            height: 4px;
+            background: var(--secondary);
+            border-radius: 5px;
+        }
+
+        /* CARDS */
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
         }
 
         .card {
             background: var(--white);
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
             border-top: 4px solid var(--primary);
-            transition: transform 0.2s;
+            transition: transform 0.25s, box-shadow 0.25s;
         }
 
         .card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-6px);
+            box-shadow: 0 15px 35px rgba(15, 23, 42, 0.13);
         }
 
         .card h3 {
-            margin-bottom: 0.5rem;
             color: var(--primary);
+            margin-bottom: 10px;
+            font-size: 1.15rem;
         }
 
+        .card p {
+            color: var(--gray);
+        }
+
+        /* FEATURE */
+
+        .feature-box {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            border-radius: 16px;
+            padding: 38px 30px;
+            margin: 25px 0 50px;
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+
+        .feature-box h2 {
+            color: white;
+            margin-bottom: 12px;
+        }
+
+        .feature-box p {
+            max-width: 800px;
+            margin: auto;
+            color: #dbe7f3;
+        }
+
+        /* TIMELINE */
+
         .timeline {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            background: white;
+            padding: 30px;
+            border-radius: 14px;
+            box-shadow: var(--shadow);
         }
 
         .timeline-item {
-            margin-bottom: 1.5rem;
-            padding-left: 1.5rem;
-            border-left: 3px solid var(--secondary);
+            margin-bottom: 25px;
+            padding: 5px 0 5px 25px;
+            border-left: 4px solid var(--secondary);
         }
 
         .timeline-item:last-child {
@@ -148,106 +289,212 @@
             color: var(--primary);
             display: block;
             font-size: 1.1rem;
-            margin-bottom: 0.25rem;
+            margin-bottom: 4px;
         }
+
+        .timeline-item p {
+            color: var(--gray);
+        }
+
+        /* NOTE */
 
         .note {
-            background-color: #feebc8;
-            border-left: 4px solid var(--secondary);
-            padding: 1.2rem;
-            margin: 2rem 0;
-            border-radius: 4px;
-            font-style: italic;
+            background: #fff8e7;
+            border-left: 5px solid var(--secondary);
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 8px;
+            color: #5b4a20;
         }
 
+        /* ABOUT */
+
+        .about-box {
+            background: white;
+            padding: 35px;
+            border-radius: 14px;
+            box-shadow: var(--shadow);
+        }
+
+        .about-box p {
+            color: var(--gray);
+            margin-bottom: 18px;
+        }
+
+        .vision {
+            border-left: 4px solid var(--secondary);
+            padding-left: 18px;
+        }
+
+        .vision strong {
+            color: var(--primary);
+        }
+
+        /* PROJECTS */
+
+        .project-card {
+            min-height: 180px;
+        }
+
+        .project-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        /* CONTACT */
+
         .contact-section {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            margin-top: 2rem;
+            background: linear-gradient(135deg, #0f3153, #09213a);
+            color: white;
+            padding: 40px 30px;
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+        }
+
+        .contact-section h2,
+        .contact-section h3 {
+            color: white;
+        }
+
+        .contact-intro {
+            color: #dbe7f3;
+            margin-bottom: 25px;
         }
 
         .contact-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 1.5rem;
+            grid-template-columns: 1fr 1fr;
+            gap: 35px;
         }
 
         .contact-details p {
-            margin-bottom: 0.8rem;
-            font-size: 1.05rem;
+            margin-bottom: 13px;
         }
 
         .contact-details a {
-            color: var(--primary);
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .contact-details a:hover {
-            text-decoration: underline;
+            color: var(--secondary-light);
+            font-weight: 700;
         }
 
         .action-buttons {
             display: flex;
             flex-direction: column;
-            gap: 1rem;
             justify-content: center;
+            gap: 14px;
         }
 
         .btn {
-            display: inline-flex;
+            display: flex;
             align-items: center;
             justify-content: center;
-            gap: 0.5rem;
-            padding: 0.8rem 1.5rem;
-            border-radius: 6px;
-            text-decoration: none;
-            color: var(--white);
-            font-weight: bold;
-            font-size: 1.1rem;
-            transition: opacity 0.2s;
-            text-align: center;
+            padding: 14px 20px;
+            border-radius: 8px;
+            color: white;
+            font-weight: 800;
+            font-size: 1rem;
+            transition: 0.2s;
         }
 
         .btn:hover {
-            opacity: 0.9;
+            transform: translateY(-2px);
+            opacity: 0.92;
         }
 
         .btn-whatsapp {
-            background-color: var(--whatsapp);
+            background: var(--whatsapp);
         }
 
         .btn-email {
-            background-color: var(--email);
+            background: var(--email);
         }
+
+        .btn-call {
+            background: var(--secondary);
+            color: var(--primary-dark);
+        }
+
+        /* FOOTER */
 
         footer {
             text-align: center;
-            padding: 2.5rem;
-            margin-top: 5rem;
-            background-color: #2d3748;
-            color: #a0aec0;
-            font-size: 0.95rem;
+            padding: 40px 20px;
+            margin-top: 65px;
+            background: #172333;
+            color: #b9c4d0;
         }
 
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 2rem;
+        footer strong {
+            color: white;
+        }
+
+        footer .footer-tagline {
+            color: var(--secondary-light);
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* FLOATING WHATSAPP */
+
+        .floating-whatsapp {
+            position: fixed;
+            right: 18px;
+            bottom: 18px;
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            background: var(--whatsapp);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+            z-index: 999;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 700px) {
+
+            header {
+                padding: 42px 15px 35px;
             }
 
-            header h2.hero-title {
-                font-size: 1.2rem;
+            .brand h1 {
+                letter-spacing: 1px;
             }
 
-            .intro {
-                font-size: 1rem;
+            .tagline {
+                font-size: 0.82rem;
+                letter-spacing: 1px;
             }
 
-            .container {
-                padding: 0 0.8rem;
+            .nav-container {
+                gap: 2px;
+            }
+
+            nav a {
+                font-size: 0.78rem;
+                padding: 6px 8px;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-box,
+            .contact-section {
+                padding: 25px 20px;
+            }
+
+            .timeline {
+                padding: 22px;
+            }
+
+            .floating-whatsapp {
+                width: 52px;
+                height: 52px;
+                font-size: 24px;
             }
         }
     </style>
@@ -255,20 +502,31 @@
 
 <body>
 
+<!-- HEADER -->
+
 <header>
 
-    <h1 id="brandName">Nakhoda Constructions</h1>
+    <div class="brand">
 
-    <p class="tagline" id="brandTagline">
-        MERI MITTI • MERI ZAMEEN • MERA GHAR
-    </p>
+        <h1 id="brand-name">Nakhoda Constructions</h1>
 
-    <h2 class="hero-title" id="heroTitle">
-        BUILD • PLAN • SUPERVISE<br>
-        Build Your Home. Build Your Future.
-    </h2>
+        <p class="tagline" id="brand-tagline">
+            MERI MITTI • MERI ZAMEEN • MERA GHAR
+        </p>
+
+        <h2 class="hero-title" id="hero-title">
+            BUILD • PLAN • SUPERVISE<br>
+            Build Your Home. Build Your Future.
+        </h2>
+
+        <p class="hero-subtitle" id="hero-subtitle">
+            Practical construction solutions built around your land, your requirements and your vision.
+        </p>
+
+    </div>
 
     <div class="lang-switcher">
+
         <button class="lang-btn active" onclick="switchLang('en')">
             English
         </button>
@@ -280,405 +538,550 @@
         <button class="lang-btn" onclick="switchLang('kb')">
             Kokborok
         </button>
+
     </div>
 
 </header>
 
 
-<div class="container">
+<!-- NAVIGATION -->
 
-    <p class="intro" id="mainIntro">
+<nav>
+
+    <div class="nav-container">
+
+        <a href="#services">Services</a>
+        <a href="#catalogue">Catalogue</a>
+        <a href="#techniques">Techniques</a>
+        <a href="#plans">House Plans</a>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+
+    </div>
+
+</nav>
+
+
+<main class="container">
+
+
+    <!-- INTRO -->
+
+    <p class="intro" id="main-intro">
+
         Complete construction solutions for residential, commercial,
         institutional and infrastructure works — from planning and
         estimation to execution and finishing.
+
     </p>
+
+
+    <!-- FEATURE -->
+
+    <div class="feature-box">
+
+        <h2 id="feature-title">
+            Your Land. Your Dream. Our Responsibility.
+        </h2>
+
+        <p id="feature-text">
+            From the first idea to the final handover, Nakhoda Constructions
+            aims to provide practical coordination, construction support and
+            quality-focused execution.
+        </p>
+
+    </div>
 
 
     <!-- SERVICES -->
 
-    <h2 id="secServices">Our Services</h2>
+    <section id="services">
 
-    <div class="grid">
+        <h2 class="section-title" id="sec-services">
+            Our Services
+        </h2>
 
-        <div class="card">
-            <h3 id="srvTitle1">🏠 Building Construction</h3>
-            <p id="srvDesc1">
-                Residential, commercial and institutional construction works.
-            </p>
+        <div class="grid">
+
+            <div class="card">
+                <h3 id="srv-title-1">🏠 Building Construction</h3>
+                <p id="srv-desc-1">
+                    Residential, commercial and institutional construction works.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3 id="srv-title-2">📐 Planning & Estimation</h3>
+                <p id="srv-desc-2">
+                    Concept planning, quantity estimation, budgeting and project coordination.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3 id="srv-title-3">🏗 Civil & RCC Works</h3>
+                <p id="srv-desc-3">
+                    Foundation, columns, beams, slabs, masonry, plaster and related civil works.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3 id="srv-title-4">👷 Site Supervision</h3>
+                <p id="srv-desc-4">
+                    Labour coordination, progress monitoring and quality-focused supervision.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3 id="srv-title-5">🔧 Renovation</h3>
+                <p id="srv-desc-5">
+                    Repair, extension, alteration and remodelling of existing buildings.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3 id="srv-title-6">🏢 Infrastructure Works</h3>
+                <p id="srv-desc-6">
+                    Institutional and infrastructure-related civil construction works.
+                </p>
+            </div>
+
         </div>
 
-        <div class="card">
-            <h3 id="srvTitle2">📐 Planning & Estimation</h3>
-            <p id="srvDesc2">
-                Concept planning, quantity estimation, budgeting and project coordination.
-            </p>
+    </section>
+
+
+    <!-- CATALOGUE -->
+
+    <section id="catalogue">
+
+        <h2 class="section-title" id="sec-catalogue">
+            Construction Catalogue
+        </h2>
+
+        <div class="grid">
+
+            <div class="card">
+                <h3 id="cat-title-1">🏡 Residential</h3>
+                <p id="cat-desc-1">
+                    <strong>House Designs:</strong>
+                    Modern concepts, elevations and practical home layouts.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3 id="cat-title-2">🏗 Structure</h3>
+                <p id="cat-desc-2">
+                    <strong>Foundation & RCC:</strong>
+                    Foundation, reinforcement, columns, beams and slab systems.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3 id="cat-title-3">🧱 Masonry</h3>
+                <p id="cat-desc-3">
+                    <strong>Brick & Block Work:</strong>
+                    Wall construction, mortar, alignment, openings and curing.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3 id="cat-title-4">🎨 Finishing</h3>
+                <p id="cat-desc-4">
+                    <strong>Flooring & Painting:</strong>
+                    Flooring, wall finishes, painting and final finishing choices.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3 id="cat-title-5">💧 Waterproofing</h3>
+                <p id="cat-desc-5">
+                    <strong>Roof & Wet Areas:</strong>
+                    Roof, wet-area and moisture-control solutions.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3 id="cat-title-6">⚡ Electrical & Plumbing</h3>
+                <p id="cat-desc-6">
+                    <strong>Building Services:</strong>
+                    Systems coordinated with the construction sequence.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3 id="cat-title-7">🪟 Doors & Windows</h3>
+                <p id="cat-desc-7">
+                    <strong>Openings:</strong>
+                    Opening planning and practical selection considerations.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3 id="cat-title-8">🏢 Commercial & Institutional</h3>
+                <p id="cat-desc-8">
+                    <strong>Facilities:</strong>
+                    Reference categories for offices, schools and other institutional buildings.
+                </p>
+            </div>
+
         </div>
 
-        <div class="card">
-            <h3 id="srvTitle3">🏗 Civil & RCC Works</h3>
-            <p id="srvDesc3">
-                Foundation, columns, beams, slabs, masonry, plaster and related civil works.
-            </p>
+    </section>
+
+
+    <!-- TECHNIQUES -->
+
+    <section id="techniques">
+
+        <h2 class="section-title" id="sec-techniques">
+            Building Techniques
+        </h2>
+
+        <div class="timeline">
+
+            <div class="timeline-item">
+                <strong id="tech-title-1">
+                    01 — Site & Setting Out
+                </strong>
+                <p id="tech-desc-1">
+                    Understand site conditions, levels, boundaries and the approved layout before excavation.
+                </p>
+            </div>
+
+            <div class="timeline-item">
+                <strong id="tech-title-2">
+                    02 — Foundation
+                </strong>
+                <p id="tech-desc-2">
+                    Excavation and foundation construction are carried out according to soil conditions and structural design.
+                </p>
+            </div>
+
+            <div class="timeline-item">
+                <strong id="tech-title-3">
+                    03 — RCC Frame
+                </strong>
+                <p id="tech-desc-3">
+                    Reinforcement, formwork and concrete are executed for structural members according to drawings.
+                </p>
+            </div>
+
+            <div class="timeline-item">
+                <strong id="tech-title-4">
+                    04 — Masonry
+                </strong>
+                <p id="tech-desc-4">
+                    Walls are constructed with suitable units, mortar, alignment, openings and curing practices.
+                </p>
+            </div>
+
+            <div class="timeline-item">
+                <strong id="tech-title-5">
+                    05 — Services
+                </strong>
+                <p id="tech-desc-5">
+                    Electrical, plumbing, drainage and other services are coordinated before closing and finishing.
+                </p>
+            </div>
+
+            <div class="timeline-item">
+                <strong id="tech-title-6">
+                    06 — Waterproofing
+                </strong>
+                <p id="tech-desc-6">
+                    Moisture-prone areas receive suitable waterproofing systems and proper surface preparation.
+                </p>
+            </div>
+
+            <div class="timeline-item">
+                <strong id="tech-title-7">
+                    07 — Finishing
+                </strong>
+                <p id="tech-desc-7">
+                    Plastering, flooring, painting, doors, windows, fixtures and final quality checks complete the work.
+                </p>
+            </div>
+
+            <div class="timeline-item">
+                <strong id="tech-title-8">
+                    08 — Handover
+                </strong>
+                <p id="tech-desc-8">
+                    Final inspection, cleaning, defect correction and documentation prepare the building for handover.
+                </p>
+            </div>
+
         </div>
 
-        <div class="card">
-            <h3 id="srvTitle4">👷 Site Supervision</h3>
-            <p id="srvDesc4">
-                Labour coordination, progress monitoring and quality-focused supervision.
-            </p>
+        <div class="note">
+
+            <strong id="technical-note-title">
+                Technical Note:
+            </strong>
+
+            <span id="technical-note">
+                This catalogue is for general information. Dimensions,
+                reinforcement, concrete grade, foundation type and other
+                structural decisions depend on the project design, site
+                conditions and applicable standards.
+            </span>
+
         </div>
 
-        <div class="card">
-            <h3 id="srvTitle5">🔧 Renovation</h3>
-            <p id="srvDesc5">
-                Repair, extension, alteration and remodelling of existing buildings.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3 id="srvTitle6">🏢 Infrastructure Works</h3>
-            <p id="srvDesc6">
-                Institutional and infrastructure-related civil construction works.
-            </p>
-        </div>
-
-    </div>
-
-
-    <!-- CONSTRUCTION CATALOGUE -->
-
-    <h2 id="secCatalogue">Construction Catalogue</h2>
-
-    <div class="grid">
-
-        <div class="card">
-            <h3 id="catTitle1">🏡 Residential</h3>
-            <p id="catDesc1">
-                <strong>House Designs:</strong>
-                Modern concepts, elevations and practical home layouts.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3 id="catTitle2">🏗 Structure</h3>
-            <p id="catDesc2">
-                <strong>Foundation & RCC:</strong>
-                Foundation, reinforcement, columns, beams and slab systems.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3 id="catTitle3">🧱 Masonry</h3>
-            <p id="catDesc3">
-                <strong>Brick & Block Work:</strong>
-                Wall construction, mortar, alignment, openings and curing.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3 id="catTitle4">🎨 Finishing</h3>
-            <p id="catDesc4">
-                <strong>Flooring & Painting:</strong>
-                Flooring, wall finishes, painting and final finishing choices.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3 id="catTitle5">💧 Waterproofing</h3>
-            <p id="catDesc5">
-                <strong>Roof & Wet Areas:</strong>
-                Roof, wet-area and moisture-control solutions.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3 id="catTitle6">⚡ Electrical & Plumbing</h3>
-            <p id="catDesc6">
-                <strong>Building Services:</strong>
-                Systems coordinated with the construction sequence.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3 id="catTitle7">🪟 Doors & Windows</h3>
-            <p id="catDesc7">
-                <strong>Openings:</strong>
-                Opening planning and practical selection considerations.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3 id="catTitle8">🏢 Commercial & Institutional</h3>
-            <p id="catDesc8">
-                <strong>Facilities:</strong>
-                Reference categories for offices, schools and other institutional buildings.
-            </p>
-        </div>
-
-    </div>
-
-
-    <!-- BUILDING TECHNIQUES -->
-
-    <h2 id="secTechniques">Building Techniques</h2>
-
-    <div class="timeline">
-
-        <div class="timeline-item">
-            <strong id="techTitle1">01 — Site & Setting Out</strong>
-            <p id="techDesc1">
-                Understand site conditions, levels, boundaries and the approved layout before excavation.
-            </p>
-        </div>
-
-        <div class="timeline-item">
-            <strong id="techTitle2">02 — Foundation</strong>
-            <p id="techDesc2">
-                Excavation and foundation construction are carried out according to soil conditions and structural design.
-            </p>
-        </div>
-
-        <div class="timeline-item">
-            <strong id="techTitle3">03 — RCC Frame</strong>
-            <p id="techDesc3">
-                Reinforcement, formwork and concrete are executed for structural members according to drawings.
-            </p>
-        </div>
-
-        <div class="timeline-item">
-            <strong id="techTitle4">04 — Masonry</strong>
-            <p id="techDesc4">
-                Walls are constructed with suitable units, mortar, alignment, openings and curing practices.
-            </p>
-        </div>
-
-        <div class="timeline-item">
-            <strong id="techTitle5">05 — Services</strong>
-            <p id="techDesc5">
-                Electrical, plumbing, drainage and other services are coordinated before closing and finishing.
-            </p>
-        </div>
-
-        <div class="timeline-item">
-            <strong id="techTitle6">06 — Waterproofing</strong>
-            <p id="techDesc6">
-                Moisture-prone areas receive suitable waterproofing systems and proper surface preparation.
-            </p>
-        </div>
-
-        <div class="timeline-item">
-            <strong id="techTitle7">07 — Finishing</strong>
-            <p id="techDesc7">
-                Plastering, flooring, painting, doors, windows, fixtures and final quality checks complete the work.
-            </p>
-        </div>
-
-        <div class="timeline-item">
-            <strong id="techTitle8">08 — Handover</strong>
-            <p id="techDesc8">
-                Final inspection, cleaning, defect correction and documentation prepare the building for handover.
-            </p>
-        </div>
-
-    </div>
-
-    <div class="note">
-        <strong id="technicalNoteTitle">Technical Note:</strong>
-
-        <span id="technicalNote">
-            This catalogue is for general information. Dimensions,
-            reinforcement, concrete grade, foundation type and other
-            structural decisions depend on the project design, site
-            conditions and applicable standards.
-        </span>
-    </div>
+    </section>
 
 
     <!-- HOUSE PLANS -->
 
-    <h2 id="secPlans">House Plans & Design Concepts</h2>
+    <section id="plans">
 
-    <div class="grid">
+        <h2 class="section-title" id="sec-plans">
+            House Plans & Design Concepts
+        </h2>
 
-        <div class="card">
-            <h3 id="planTitle1">🏠 Compact Homes</h3>
-            <p id="planDesc1">
-                Efficient planning for smaller plots and practical family requirements.
-            </p>
+        <div class="grid">
+
+            <div class="card">
+                <h3 id="plan-title-1">🏠 Compact Homes</h3>
+                <p id="plan-desc-1">
+                    Efficient planning for smaller plots and practical family requirements.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3 id="plan-title-2">🏡 Family Homes</h3>
+                <p id="plan-desc-2">
+                    Balanced spaces for bedrooms, living, dining, kitchen and services.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3 id="plan-title-3">🏢 Multi-Floor Homes</h3>
+                <p id="plan-desc-3">
+                    Planning considerations for G+1, G+2 and other multi-level buildings.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3 id="plan-title-4">📐 Custom Concepts</h3>
+                <p id="plan-desc-4">
+                    Customer requirements can be developed into a project-specific design through qualified professionals.
+                </p>
+            </div>
+
         </div>
 
-        <div class="card">
-            <h3 id="planTitle2">🏡 Family Homes</h3>
-            <p id="planDesc2">
-                Balanced spaces for bedrooms, living, dining, kitchen and services.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3 id="planTitle3">🏢 Multi-Floor Homes</h3>
-            <p id="planDesc3">
-                Planning considerations for G+1, G+2 and other multi-level buildings.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3 id="planTitle4">📐 Custom Concepts</h3>
-            <p id="planDesc4">
-                Customer requirements can be developed into a project-specific design through qualified professionals.
-            </p>
-        </div>
-
-    </div>
+    </section>
 
 
     <!-- PROJECTS -->
 
-    <h2 id="secProjects">Our Projects</h2>
+    <section id="projects">
 
-    <div class="grid">
+        <h2 class="section-title" id="sec-projects">
+            Our Projects
+        </h2>
 
-        <div class="card">
-            <h3 id="projectTitle1">🏗 Residential Projects</h3>
-            <p id="projectDesc1">
-                Residential construction, renovation and improvement works.
-            </p>
+        <div class="grid">
+
+            <div class="card project-card">
+                <div class="project-icon">🏗</div>
+                <h3 id="project-title-1">
+                    Residential Projects
+                </h3>
+                <p id="project-desc-1">
+                    Residential construction, renovation and improvement works.
+                </p>
+            </div>
+
+            <div class="card project-card">
+                <div class="project-icon">🏫</div>
+                <h3 id="project-title-2">
+                    Institutional Projects
+                </h3>
+                <p id="project-desc-2">
+                    School, institutional and other civil construction works.
+                </p>
+            </div>
+
+            <div class="card project-card">
+                <div class="project-icon">🏢</div>
+                <h3 id="project-title-3">
+                    Commercial Projects
+                </h3>
+                <p id="project-desc-3">
+                    Commercial buildings and related construction works.
+                </p>
+            </div>
+
+            <div class="card project-card">
+                <div class="project-icon">🚧</div>
+                <h3 id="project-title-4">
+                    Infrastructure Works
+                </h3>
+                <p id="project-desc-4">
+                    Infrastructure-related civil works and project coordination.
+                </p>
+            </div>
+
         </div>
 
-        <div class="card">
-            <h3 id="projectTitle2">🏫 Institutional Projects</h3>
-            <p id="projectDesc2">
-                School, institutional and other civil construction works.
-            </p>
+        <div class="note">
+
+            <strong id="portfolio-title">
+                Portfolio Note:
+            </strong>
+
+            <span id="portfolio-note">
+                Genuine Nakhoda project photographs and project details
+                will be added as the portfolio grows.
+            </span>
+
         </div>
 
-        <div class="card">
-            <h3 id="projectTitle3">🏢 Commercial Projects</h3>
-            <p id="projectDesc3">
-                Commercial buildings and related construction works.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3 id="projectTitle4">🚧 Infrastructure Works</h3>
-            <p id="projectDesc4">
-                Infrastructure-related civil works and project coordination.
-            </p>
-        </div>
-
-    </div>
-
-    <div class="note">
-        <strong id="portfolioTitle">Portfolio Note:</strong>
-
-        <span id="portfolioNote">
-            Genuine Nakhoda project photographs and project details
-            will be added as the portfolio grows.
-        </span>
-    </div>
+    </section>
 
 
     <!-- ABOUT -->
 
-    <h2 id="secAbout">About Nakhoda Constructions</h2>
+    <section id="about">
 
-    <div class="contact-section">
+        <h2 class="section-title" id="sec-about">
+            About Nakhoda Constructions
+        </h2>
 
-        <p id="aboutText">
-            A house is more than concrete and steel. It is built on land,
-            family, trust and dreams. Nakhoda Constructions aims to make
-            construction easier to understand, plan and coordinate through
-            practical construction services and project support.
-        </p>
+        <div class="about-box">
 
-        <br>
+            <p id="about-text">
+                A house is more than concrete and steel. It is built on land,
+                family, trust and dreams. Nakhoda Constructions aims to make
+                construction easier to understand, plan and coordinate through
+                practical construction services and project support.
+            </p>
 
-        <p>
-            <strong id="visionLabel">Vision:</strong>
+            <p class="vision">
 
-            <span id="visionText">
-                To become a trusted construction partner for people and
-                institutions across Tripura and beyond.
-            </span>
-        </p>
+                <strong id="vision-label">
+                    Vision:
+                </strong>
 
-    </div>
+                <span id="vision-text">
+                    To become a trusted construction partner for people and
+                    institutions across Tripura and beyond.
+                </span>
+
+            </p>
+
+        </div>
+
+    </section>
 
 
     <!-- CONTACT -->
 
-    <h2 id="secContact">Start Your Construction Journey</h2>
+    <section id="contact">
 
-    <div class="contact-section">
+        <h2 class="section-title" id="sec-contact">
+            Start Your Construction Journey
+        </h2>
 
-        <p id="contactIntro">
-            Tell us about your project. Whether you are planning a new home,
-            commercial building, institutional project, renovation or other
-            civil work, contact Nakhoda Constructions.
-        </p>
+        <div class="contact-section">
 
-        <div class="contact-grid">
+            <p class="contact-intro" id="contact-intro">
+                Tell us about your project. Whether you are planning a new
+                home, commercial building, institutional project, renovation
+                or other civil work, contact Nakhoda Constructions.
+            </p>
 
-            <div class="contact-details">
+            <div class="contact-grid">
 
-                <h3 id="contactTitle">
-                    📞 Contact Nakhoda
-                </h3>
+                <div class="contact-details">
 
-                <p>
-                    📱 <strong id="phoneLabel">Phone:</strong>
+                    <h3 id="contact-title">
+                        📞 Contact Nakhoda
+                    </h3>
 
-                    <a href="tel:+918416081956">
-                        8416081956
+                    <br>
+
+                    <p>
+                        📱
+                        <strong id="phone-label">
+                            Phone:
+                        </strong>
+
+                        <a href="tel:+918416081956">
+                            8416081956
+                        </a>
+
+                        /
+
+                        <a href="tel:+918794912770">
+                            8794912770
+                        </a>
+                    </p>
+
+                    <p>
+                        📧
+                        <strong id="email-label">
+                            Email:
+                        </strong>
+
+                        <a href="mailto:nakhodaconstructions@gmail.com">
+                            nakhodaconstructions@gmail.com
+                        </a>
+                    </p>
+
+                    <p>
+                        📍
+                        <strong id="address-label">
+                            Office:
+                        </strong>
+
+                        <span id="address-text">
+                            Durga Chowmuhani, Near Albert Club,
+                            Agartala, West Tripura
+                        </span>
+                    </p>
+
+                </div>
+
+
+                <div class="action-buttons">
+
+                    <a
+                        class="btn btn-whatsapp"
+                        href="https://wa.me/918416081956"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        💬 WhatsApp Us
                     </a>
 
-                    /
-
-                    <a href="tel:+918794912770">
-                        8794912770
+                    <a
+                        class="btn btn-call"
+                        href="tel:+918416081956"
+                    >
+                        📞 Call Nakhoda
                     </a>
-                </p>
 
-                <p>
-                    📧 <strong id="emailLabel">Email:</strong>
-
-                    <a href="mailto:nakhodaconstructions@gmail.com">
-                        nakhodaconstructions@gmail.com
+                    <a
+                        class="btn btn-email"
+                        href="mailto:nakhodaconstructions@gmail.com"
+                    >
+                        📧 Send Email
                     </a>
-                </p>
 
-                <p>
-                    📍 <strong id="addressLabel">Office:</strong>
-
-                    <span id="addressText">
-                        Durga Chowmuhani, Near Albert Club,
-                        Agartala, West Tripura
-                    </span>
-                </p>
-
-            </div>
-
-
-            <div class="action-buttons">
-
-                <a class="btn btn-whatsapp"
-                   href="https://wa.me/918416081956"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    💬 WhatsApp Us
-                </a>
-
-                <a class="btn btn-email"
-                   href="mailto:nakhodaconstructions@gmail.com">
-                    📧 Send Email
-                </a>
+                </div>
 
             </div>
 
         </div>
 
-    </div>
+    </section>
 
-</div>
+
+</main>
 
 
 <!-- FOOTER -->
@@ -689,15 +1092,28 @@
         © 2026 <strong>Nakhoda Constructions</strong>
     </p>
 
-    <p>
+    <p class="footer-tagline">
         Meri Mitti • Meri Zameen • Mera Ghar
     </p>
 
-    <p id="footerText">
+    <p id="footer-text">
         Construction • Planning • Supervision • Infrastructure
     </p>
 
 </footer>
+
+
+<!-- FLOATING WHATSAPP -->
+
+<a
+    class="floating-whatsapp"
+    href="https://wa.me/918416081956"
+    target="_blank"
+    rel="noopener"
+    aria-label="Chat with Nakhoda Constructions on WhatsApp"
+>
+    💬
+</a>
 
 
 <!-- LANGUAGE TRANSLATION SCRIPT -->
@@ -708,477 +1124,828 @@ const translations = {
 
     en: {
 
-        brandName: "Nakhoda Constructions",
+        "brand-name": "Nakhoda Constructions",
 
-        brandTagline:
+        "brand-tagline":
             "MERI MITTI • MERI ZAMEEN • MERA GHAR",
 
-        heroTitle:
+        "hero-title":
             "BUILD • PLAN • SUPERVISE<br>Build Your Home. Build Your Future.",
 
-        mainIntro:
+        "hero-subtitle":
+            "Practical construction solutions built around your land, your requirements and your vision.",
+
+        "main-intro":
             "Complete construction solutions for residential, commercial, institutional and infrastructure works — from planning and estimation to execution and finishing.",
 
-        secServices: "Our Services",
+        "feature-title":
+            "Your Land. Your Dream. Our Responsibility.",
 
-        srvTitle1: "🏠 Building Construction",
-        srvDesc1: "Residential, commercial and institutional construction works.",
+        "feature-text":
+            "From the first idea to the final handover, Nakhoda Constructions aims to provide practical coordination, construction support and quality-focused execution.",
 
-        srvTitle2: "📐 Planning & Estimation",
-        srvDesc2: "Concept planning, quantity estimation, budgeting and project coordination.",
+        "sec-services":
+            "Our Services",
 
-        srvTitle3: "🏗 Civil & RCC Works",
-        srvDesc3: "Foundation, columns, beams, slabs, masonry, plaster and related civil works.",
+        "srv-title-1":
+            "🏠 Building Construction",
 
-        srvTitle4: "👷 Site Supervision",
-        srvDesc4: "Labour coordination, progress monitoring and quality-focused supervision.",
+        "srv-desc-1":
+            "Residential, commercial and institutional construction works.",
 
-        srvTitle5: "🔧 Renovation",
-        srvDesc5: "Repair, extension, alteration and remodelling of existing buildings.",
+        "srv-title-2":
+            "📐 Planning & Estimation",
 
-        srvTitle6: "🏢 Infrastructure Works",
-        srvDesc6: "Institutional and infrastructure-related civil construction works.",
+        "srv-desc-2":
+            "Concept planning, quantity estimation, budgeting and project coordination.",
 
-        secCatalogue: "Construction Catalogue",
+        "srv-title-3":
+            "🏗 Civil & RCC Works",
 
-        catTitle1: "🏡 Residential",
-        catDesc1: "<strong>House Designs:</strong> Modern concepts, elevations and practical home layouts.",
+        "srv-desc-3":
+            "Foundation, columns, beams, slabs, masonry, plaster and related civil works.",
 
-        catTitle2: "🏗 Structure",
-        catDesc2: "<strong>Foundation & RCC:</strong> Foundation, reinforcement, columns, beams and slab systems.",
+        "srv-title-4":
+            "👷 Site Supervision",
 
-        catTitle3: "🧱 Masonry",
-        catDesc3: "<strong>Brick & Block Work:</strong> Wall construction, mortar, alignment, openings and curing.",
+        "srv-desc-4":
+            "Labour coordination, progress monitoring and quality-focused supervision.",
 
-        catTitle4: "🎨 Finishing",
-        catDesc4: "<strong>Flooring & Painting:</strong> Flooring, wall finishes, painting and final finishing choices.",
+        "srv-title-5":
+            "🔧 Renovation",
 
-        catTitle5: "💧 Waterproofing",
-        catDesc5: "<strong>Roof & Wet Areas:</strong> Roof, wet-area and moisture-control solutions.",
+        "srv-desc-5":
+            "Repair, extension, alteration and remodelling of existing buildings.",
 
-        catTitle6: "⚡ Electrical & Plumbing",
-        catDesc6: "<strong>Building Services:</strong> Systems coordinated with the construction sequence.",
+        "srv-title-6":
+            "🏢 Infrastructure Works",
 
-        catTitle7: "🪟 Doors & Windows",
-        catDesc7: "<strong>Openings:</strong> Opening planning and practical selection considerations.",
+        "srv-desc-6":
+            "Institutional and infrastructure-related civil construction works.",
 
-        catTitle8: "🏢 Commercial & Institutional",
-        catDesc8: "<strong>Facilities:</strong> Reference categories for offices, schools and other institutional buildings.",
+        "sec-catalogue":
+            "Construction Catalogue",
 
-        secTechniques: "Building Techniques",
+        "cat-title-1":
+            "🏡 Residential",
 
-        techTitle1: "01 — Site & Setting Out",
-        techDesc1: "Understand site conditions, levels, boundaries and the approved layout before excavation.",
+        "cat-desc-1":
+            "<strong>House Designs:</strong> Modern concepts, elevations and practical home layouts.",
 
-        techTitle2: "02 — Foundation",
-        techDesc2: "Excavation and foundation construction are carried out according to soil conditions and structural design.",
+        "cat-title-2":
+            "🏗 Structure",
 
-        techTitle3: "03 — RCC Frame",
-        techDesc3: "Reinforcement, formwork and concrete are executed for structural members according to drawings.",
+        "cat-desc-2":
+            "<strong>Foundation & RCC:</strong> Foundation, reinforcement, columns, beams and slab systems.",
 
-        techTitle4: "04 — Masonry",
-        techDesc4: "Walls are constructed with suitable units, mortar, alignment, openings and curing practices.",
+        "cat-title-3":
+            "🧱 Masonry",
 
-        techTitle5: "05 — Services",
-        techDesc5: "Electrical, plumbing, drainage and other services are coordinated before closing and finishing.",
+        "cat-desc-3":
+            "<strong>Brick & Block Work:</strong> Wall construction, mortar, alignment, openings and curing.",
 
-        techTitle6: "06 — Waterproofing",
-        techDesc6: "Moisture-prone areas receive suitable waterproofing systems and proper surface preparation.",
+        "cat-title-4":
+            "🎨 Finishing",
 
-        techTitle7: "07 — Finishing",
-        techDesc7: "Plastering, flooring, painting, doors, windows, fixtures and final quality checks complete the work.",
+        "cat-desc-4":
+            "<strong>Flooring & Painting:</strong> Flooring, wall finishes, painting and final finishing choices.",
 
-        techTitle8: "08 — Handover",
-        techDesc8: "Final inspection, cleaning, defect correction and documentation prepare the building for handover.",
+        "cat-title-5":
+            "💧 Waterproofing",
 
-        technicalNoteTitle: "Technical Note:",
+        "cat-desc-5":
+            "<strong>Roof & Wet Areas:</strong> Roof, wet-area and moisture-control solutions.",
 
-        technicalNote:
+        "cat-title-6":
+            "⚡ Electrical & Plumbing",
+
+        "cat-desc-6":
+            "<strong>Building Services:</strong> Systems coordinated with the construction sequence.",
+
+        "cat-title-7":
+            "🪟 Doors & Windows",
+
+        "cat-desc-7":
+            "<strong>Openings:</strong> Opening planning and practical selection considerations.",
+
+        "cat-title-8":
+            "🏢 Commercial & Institutional",
+
+        "cat-desc-8":
+            "<strong>Facilities:</strong> Reference categories for offices, schools and other institutional buildings.",
+
+        "sec-techniques":
+            "Building Techniques",
+
+        "tech-title-1":
+            "01 — Site & Setting Out",
+
+        "tech-desc-1":
+            "Understand site conditions, levels, boundaries and the approved layout before excavation.",
+
+        "tech-title-2":
+            "02 — Foundation",
+
+        "tech-desc-2":
+            "Excavation and foundation construction are carried out according to soil conditions and structural design.",
+
+        "tech-title-3":
+            "03 — RCC Frame",
+
+        "tech-desc-3":
+            "Reinforcement, formwork and concrete are executed for structural members according to drawings.",
+
+        "tech-title-4":
+            "04 — Masonry",
+
+        "tech-desc-4":
+            "Walls are constructed with suitable units, mortar, alignment, openings and curing practices.",
+
+        "tech-title-5":
+            "05 — Services",
+
+        "tech-desc-5":
+            "Electrical, plumbing, drainage and other services are coordinated before closing and finishing.",
+
+        "tech-title-6":
+            "06 — Waterproofing",
+
+        "tech-desc-6":
+            "Moisture-prone areas receive suitable waterproofing systems and proper surface preparation.",
+
+        "tech-title-7":
+            "07 — Finishing",
+
+        "tech-desc-7":
+            "Plastering, flooring, painting, doors, windows, fixtures and final quality checks complete the work.",
+
+        "tech-title-8":
+            "08 — Handover",
+
+        "tech-desc-8":
+            "Final inspection, cleaning, defect correction and documentation prepare the building for handover.",
+
+        "technical-note-title":
+            "Technical Note:",
+
+        "technical-note":
             "This catalogue is for general information. Dimensions, reinforcement, concrete grade, foundation type and other structural decisions depend on the project design, site conditions and applicable standards.",
 
-        secPlans: "House Plans & Design Concepts",
+        "sec-plans":
+            "House Plans & Design Concepts",
 
-        planTitle1: "🏠 Compact Homes",
-        planDesc1: "Efficient planning for smaller plots and practical family requirements.",
+        "plan-title-1":
+            "🏠 Compact Homes",
 
-        planTitle2: "🏡 Family Homes",
-        planDesc2: "Balanced spaces for bedrooms, living, dining, kitchen and services.",
+        "plan-desc-1":
+            "Efficient planning for smaller plots and practical family requirements.",
 
-        planTitle3: "🏢 Multi-Floor Homes",
-        planDesc3: "Planning considerations for G+1, G+2 and other multi-level buildings.",
+        "plan-title-2":
+            "🏡 Family Homes",
 
-        planTitle4: "📐 Custom Concepts",
-        planDesc4: "Customer requirements can be developed into a project-specific design through qualified professionals.",
+        "plan-desc-2":
+            "Balanced spaces for bedrooms, living, dining, kitchen and services.",
 
-        secProjects: "Our Projects",
+        "plan-title-3":
+            "🏢 Multi-Floor Homes",
 
-        projectTitle1: "🏗 Residential Projects",
-        projectDesc1: "Residential construction, renovation and improvement works.",
+        "plan-desc-3":
+            "Planning considerations for G+1, G+2 and other multi-level buildings.",
 
-        projectTitle2: "🏫 Institutional Projects",
-        projectDesc2: "School, institutional and other civil construction works.",
+        "plan-title-4":
+            "📐 Custom Concepts",
 
-        projectTitle3: "🏢 Commercial Projects",
-        projectDesc3: "Commercial buildings and related construction works.",
+        "plan-desc-4":
+            "Customer requirements can be developed into a project-specific design through qualified professionals.",
 
-        projectTitle4: "🚧 Infrastructure Works",
-        projectDesc4: "Infrastructure-related civil works and project coordination.",
+        "sec-projects":
+            "Our Projects",
 
-        portfolioTitle: "Portfolio Note:",
+        "project-title-1":
+            "Residential Projects",
 
-        portfolioNote:
+        "project-desc-1":
+            "Residential construction, renovation and improvement works.",
+
+        "project-title-2":
+            "Institutional Projects",
+
+        "project-desc-2":
+            "School, institutional and other civil construction works.",
+
+        "project-title-3":
+            "Commercial Projects",
+
+        "project-desc-3":
+            "Commercial buildings and related construction works.",
+
+        "project-title-4":
+            "Infrastructure Works",
+
+        "project-desc-4":
+            "Infrastructure-related civil works and project coordination.",
+
+        "portfolio-title":
+            "Portfolio Note:",
+
+        "portfolio-note":
             "Genuine Nakhoda project photographs and project details will be added as the portfolio grows.",
 
-        secAbout: "About Nakhoda Constructions",
+        "sec-about":
+            "About Nakhoda Constructions",
 
-        aboutText:
+        "about-text":
             "A house is more than concrete and steel. It is built on land, family, trust and dreams. Nakhoda Constructions aims to make construction easier to understand, plan and coordinate through practical construction services and project support.",
 
-        visionLabel: "Vision:",
+        "vision-label":
+            "Vision:",
 
-        visionText:
+        "vision-text":
             "To become a trusted construction partner for people and institutions across Tripura and beyond.",
 
-        secContact: "Start Your Construction Journey",
+        "sec-contact":
+            "Start Your Construction Journey",
 
-        contactIntro:
+        "contact-intro":
             "Tell us about your project. Whether you are planning a new home, commercial building, institutional project, renovation or other civil work, contact Nakhoda Constructions.",
 
-        contactTitle: "📞 Contact Nakhoda",
+        "contact-title":
+            "📞 Contact Nakhoda",
 
-        phoneLabel: "Phone:",
-        emailLabel: "Email:",
-        addressLabel: "Office:",
+        "phone-label":
+            "Phone:",
 
-        addressText:
+        "email-label":
+            "Email:",
+
+        "address-label":
+            "Office:",
+
+        "address-text":
             "Durga Chowmuhani, Near Albert Club, Agartala, West Tripura",
 
-        footerText:
+        "footer-text":
             "Construction • Planning • Supervision • Infrastructure"
+
     },
 
 
     bn: {
 
-        brandName: "নাখোদা কনস্ট্রাকশনস",
+        "brand-name":
+            "নাখোদা কনস্ট্রাকশনস",
 
-        brandTagline:
+        "brand-tagline":
             "আমার মাটি • আমার জমি • আমার ঘর",
 
-        heroTitle:
+        "hero-title":
             "নির্মাণ • পরিকল্পনা • তদারকি<br>আপনার ঘর গড়ুন। আপনার ভবিষ্যৎ গড়ুন।",
 
-        mainIntro:
-            "বাড়ি, বাণিজ্যিক ভবন, প্রতিষ্ঠান এবং অবকাঠামো নির্মাণের জন্য পরিকল্পনা ও হিসাব থেকে শুরু করে কাজের বাস্তবায়ন এবং ফিনিশিং পর্যন্ত সম্পূর্ণ নির্মাণ সহায়তা।",
+        "hero-subtitle":
+            "আপনার জমি, প্রয়োজন এবং স্বপ্নকে কেন্দ্র করে ব্যবহারিক নির্মাণ সমাধান।",
 
-        secServices: "আমাদের পরিষেবা",
+        "main-intro":
+            "আবাসিক, বাণিজ্যিক, প্রাতিষ্ঠানিক এবং অবকাঠামো নির্মাণের জন্য পরিকল্পনা ও হিসাব থেকে কাজের বাস্তবায়ন এবং ফিনিশিং পর্যন্ত সম্পূর্ণ নির্মাণ সহায়তা।",
 
-        srvTitle1: "🏠 ভবন নির্মাণ",
-        srvDesc1: "আবাসিক, বাণিজ্যিক এবং প্রাতিষ্ঠানিক নির্মাণ কাজ।",
+        "feature-title":
+            "আপনার জমি। আপনার স্বপ্ন। আমাদের দায়িত্ব।",
 
-        srvTitle2: "📐 পরিকল্পনা ও হিসাব",
-        srvDesc2: "কনসেপ্ট পরিকল্পনা, পরিমাণ নির্ধারণ, বাজেট এবং প্রকল্প সমন্বয়।",
+        "feature-text":
+            "প্রথম পরিকল্পনা থেকে চূড়ান্ত হ্যান্ডওভার পর্যন্ত নাখোদা কনস্ট্রাকশনস ব্যবহারিক সমন্বয়, নির্মাণ সহায়তা এবং গুণমানভিত্তিক কাজের উপর গুরুত্ব দেয়।",
 
-        srvTitle3: "🏗 সিভিল ও RCC কাজ",
-        srvDesc3: "ফাউন্ডেশন, কলাম, বিম, স্ল্যাব, গাঁথনি, প্লাস্টার এবং সংশ্লিষ্ট সিভিল কাজ।",
+        "sec-services":
+            "আমাদের পরিষেবা",
 
-        srvTitle4: "👷 সাইট তদারকি",
-        srvDesc4: "শ্রমিক সমন্বয়, কাজের অগ্রগতি পর্যবেক্ষণ এবং গুণমানভিত্তিক তদারকি।",
+        "srv-title-1":
+            "🏠 ভবন নির্মাণ",
 
-        srvTitle5: "🔧 সংস্কার",
-        srvDesc5: "পুরনো ভবনের মেরামত, সম্প্রসারণ, পরিবর্তন এবং পুনর্গঠন।",
+        "srv-desc-1":
+            "আবাসিক, বাণিজ্যিক এবং প্রাতিষ্ঠানিক নির্মাণ কাজ।",
 
-        srvTitle6: "🏢 অবকাঠামো কাজ",
-        srvDesc6: "প্রাতিষ্ঠানিক ও অবকাঠামো সম্পর্কিত সিভিল নির্মাণ কাজ।",
+        "srv-title-2":
+            "📐 পরিকল্পনা ও হিসাব",
 
-        secCatalogue: "নির্মাণ ক্যাটালগ",
+        "srv-desc-2":
+            "কনসেপ্ট পরিকল্পনা, পরিমাণ নির্ধারণ, বাজেট এবং প্রকল্প সমন্বয়।",
 
-        catTitle1: "🏡 আবাসিক",
-        catDesc1: "<strong>বাড়ির ডিজাইন:</strong> আধুনিক ধারণা, এলিভেশন এবং ব্যবহারিক বাড়ির পরিকল্পনা।",
+        "srv-title-3":
+            "🏗 সিভিল ও RCC কাজ",
 
-        catTitle2: "🏗 স্ট্রাকচার",
-        catDesc2: "<strong>ফাউন্ডেশন ও RCC:</strong> ফাউন্ডেশন, রিইনফোর্সমেন্ট, কলাম, বিম এবং স্ল্যাব ব্যবস্থা।",
+        "srv-desc-3":
+            "ফাউন্ডেশন, কলাম, বিম, স্ল্যাব, গাঁথনি, প্লাস্টার এবং সংশ্লিষ্ট সিভিল কাজ।",
 
-        catTitle3: "🧱 গাঁথনি",
-        catDesc3: "<strong>ইট ও ব্লক কাজ:</strong> দেয়াল নির্মাণ, মর্টার, অ্যালাইনমেন্ট, ওপেনিং এবং কিউরিং।",
+        "srv-title-4":
+            "👷 সাইট তদারকি",
 
-        catTitle4: "🎨 ফিনিশিং",
-        catDesc4: "<strong>ফ্লোরিং ও পেইন্টিং:</strong> মেঝে, দেয়ালের ফিনিশ, রং এবং চূড়ান্ত ফিনিশিং।",
+        "srv-desc-4":
+            "শ্রমিক সমন্বয়, কাজের অগ্রগতি পর্যবেক্ষণ এবং গুণমানভিত্তিক তদারকি।",
 
-        catTitle5: "💧 ওয়াটারপ্রুফিং",
-        catDesc5: "<strong>ছাদ ও ভেজা এলাকা:</strong> ছাদ, বাথরুম ও আর্দ্রতা নিয়ন্ত্রণের সমাধান।",
+        "srv-title-5":
+            "🔧 সংস্কার",
 
-        catTitle6: "⚡ ইলেকট্রিক্যাল ও প্লাম্বিং",
-        catDesc6: "<strong>বিল্ডিং সার্ভিস:</strong> নির্মাণের ধাপ অনুযায়ী বিভিন্ন সার্ভিসের সমন্বয়।",
+        "srv-desc-5":
+            "পুরনো ভবনের মেরামত, সম্প্রসারণ, পরিবর্তন এবং পুনর্গঠন।",
 
-        catTitle7: "🪟 দরজা ও জানালা",
-        catDesc7: "<strong>ওপেনিং:</strong> দরজা-জানালার অবস্থান ও ব্যবহারিক নির্বাচন।",
+        "srv-title-6":
+            "🏢 অবকাঠামো কাজ",
 
-        catTitle8: "🏢 বাণিজ্যিক ও প্রাতিষ্ঠানিক",
-        catDesc8: "<strong>ভবন:</strong> অফিস, স্কুল এবং অন্যান্য প্রাতিষ্ঠানিক ভবনের জন্য নির্মাণ বিভাগ।",
+        "srv-desc-6":
+            "প্রাতিষ্ঠানিক ও অবকাঠামো সম্পর্কিত সিভিল নির্মাণ কাজ।",
 
-        secTechniques: "নির্মাণ কৌশল",
+        "sec-catalogue":
+            "নির্মাণ ক্যাটালগ",
 
-        techTitle1: "01 — সাইট ও সেটিং আউট",
-        techDesc1: "খননের আগে সাইটের অবস্থা, লেভেল, সীমানা এবং অনুমোদিত লে-আউট বুঝে নেওয়া।",
+        "cat-title-1":
+            "🏡 আবাসিক",
 
-        techTitle2: "02 — ফাউন্ডেশন",
-        techDesc2: "মাটির অবস্থা ও স্ট্রাকচারাল ডিজাইন অনুযায়ী খনন এবং ফাউন্ডেশন নির্মাণ করা হয়।",
+        "cat-desc-1":
+            "<strong>বাড়ির ডিজাইন:</strong> আধুনিক ধারণা, এলিভেশন এবং ব্যবহারিক বাড়ির পরিকল্পনা।",
 
-        techTitle3: "03 — RCC ফ্রেম",
-        techDesc3: "ড্রয়িং অনুযায়ী রিইনফোর্সমেন্ট, ফর্মওয়ার্ক এবং কংক্রিটের মাধ্যমে স্ট্রাকচারাল সদস্য তৈরি করা হয়।",
+        "cat-title-2":
+            "🏗 স্ট্রাকচার",
 
-        techTitle4: "04 — গাঁথনি",
-        techDesc4: "উপযুক্ত ইট বা ব্লক, মর্টার, অ্যালাইনমেন্ট, ওপেনিং এবং কিউরিং অনুসরণ করে দেয়াল নির্মাণ করা হয়।",
+        "cat-desc-2":
+            "<strong>ফাউন্ডেশন ও RCC:</strong> ফাউন্ডেশন, রিইনফোর্সমেন্ট, কলাম, বিম এবং স্ল্যাব ব্যবস্থা।",
 
-        techTitle5: "05 — সার্ভিস",
-        techDesc5: "ইলেকট্রিক্যাল, প্লাম্বিং, ড্রেনেজ এবং অন্যান্য সার্ভিস ফিনিশিংয়ের আগে সমন্বয় করা হয়।",
+        "cat-title-3":
+            "🧱 গাঁথনি",
 
-        techTitle6: "06 — ওয়াটারপ্রুফিং",
-        techDesc6: "আর্দ্রতা প্রবণ এলাকায় উপযুক্ত ওয়াটারপ্রুফিং সিস্টেম ও সঠিক সারফেস প্রস্তুতি ব্যবহার করা হয়।",
+        "cat-desc-3":
+            "<strong>ইট ও ব্লক কাজ:</strong> দেয়াল নির্মাণ, মর্টার, অ্যালাইনমেন্ট, ওপেনিং এবং কিউরিং।",
 
-        techTitle7: "07 — ফিনিশিং",
-        techDesc7: "প্লাস্টার, ফ্লোরিং, পেইন্টিং, দরজা, জানালা, ফিক্সচার এবং চূড়ান্ত গুণমান পরীক্ষা সম্পন্ন করা হয়।",
+        "cat-title-4":
+            "🎨 ফিনিশিং",
 
-        techTitle8: "08 — হ্যান্ডওভার",
-        techDesc8: "চূড়ান্ত পরিদর্শন, পরিষ্কার, ত্রুটি সংশোধন এবং ডকুমেন্টেশনের মাধ্যমে ভবন হস্তান্তরের জন্য প্রস্তুত করা হয়।",
+        "cat-desc-4":
+            "<strong>ফ্লোরিং ও পেইন্টিং:</strong> মেঝে, দেয়ালের ফিনিশ, রং এবং চূড়ান্ত ফিনিশিং।",
 
-        technicalNoteTitle: "প্রযুক্তিগত নোট:",
+        "cat-title-5":
+            "💧 ওয়াটারপ্রুফিং",
 
-        technicalNote:
+        "cat-desc-5":
+            "<strong>ছাদ ও ভেজা এলাকা:</strong> ছাদ, বাথরুম ও আর্দ্রতা নিয়ন্ত্রণের সমাধান।",
+
+        "cat-title-6":
+            "⚡ ইলেকট্রিক্যাল ও প্লাম্বিং",
+
+        "cat-desc-6":
+            "<strong>বিল্ডিং সার্ভিস:</strong> নির্মাণের ধাপ অনুযায়ী বিভিন্ন সার্ভিসের সমন্বয়।",
+
+        "cat-title-7":
+            "🪟 দরজা ও জানালা",
+
+        "cat-desc-7":
+            "<strong>ওপেনিং:</strong> দরজা-জানালার অবস্থান ও ব্যবহারিক নির্বাচন।",
+
+        "cat-title-8":
+            "🏢 বাণিজ্যিক ও প্রাতিষ্ঠানিক",
+
+        "cat-desc-8":
+            "<strong>ভবন:</strong> অফিস, স্কুল এবং অন্যান্য প্রাতিষ্ঠানিক ভবনের জন্য নির্মাণ বিভাগ।",
+
+        "sec-techniques":
+            "নির্মাণ কৌশল",
+
+        "tech-title-1":
+            "01 — সাইট ও সেটিং আউট",
+
+        "tech-desc-1":
+            "খননের আগে সাইটের অবস্থা, লেভেল, সীমানা এবং অনুমোদিত লে-আউট বুঝে নেওয়া।",
+
+        "tech-title-2":
+            "02 — ফাউন্ডেশন",
+
+        "tech-desc-2":
+            "মাটির অবস্থা ও স্ট্রাকচারাল ডিজাইন অনুযায়ী খনন এবং ফাউন্ডেশন নির্মাণ করা হয়।",
+
+        "tech-title-3":
+            "03 — RCC ফ্রেম",
+
+        "tech-desc-3":
+            "ড্রয়িং অনুযায়ী রিইনফোর্সমেন্ট, ফর্মওয়ার্ক এবং কংক্রিটের মাধ্যমে স্ট্রাকচারাল সদস্য তৈরি করা হয়।",
+
+        "tech-title-4":
+            "04 — গাঁথনি",
+
+        "tech-desc-4":
+            "উপযুক্ত ইট বা ব্লক, মর্টার, অ্যালাইনমেন্ট, ওপেনিং এবং কিউরিং অনুসরণ করে দেয়াল নির্মাণ করা হয়।",
+
+        "tech-title-5":
+            "05 — সার্ভিস",
+
+        "tech-desc-5":
+            "ইলেকট্রিক্যাল, প্লাম্বিং, ড্রেনেজ এবং অন্যান্য সার্ভিস ফিনিশিংয়ের আগে সমন্বয় করা হয়।",
+
+        "tech-title-6":
+            "06 — ওয়াটারপ্রুফিং",
+
+        "tech-desc-6":
+            "আর্দ্রতা প্রবণ এলাকায় উপযুক্ত ওয়াটারপ্রুফিং সিস্টেম ও সঠিক সারফেস প্রস্তুতি ব্যবহার করা হয়।",
+
+        "tech-title-7":
+            "07 — ফিনিশিং",
+
+        "tech-desc-7":
+            "প্লাস্টার, ফ্লোরিং, পেইন্টিং, দরজা, জানালা, ফিক্সচার এবং চূড়ান্ত গুণমান পরীক্ষা সম্পন্ন করা হয়।",
+
+        "tech-title-8":
+            "08 — হ্যান্ডওভার",
+
+        "tech-desc-8":
+            "চূড়ান্ত পরিদর্শন, পরিষ্কার, ত্রুটি সংশোধন এবং ডকুমেন্টেশনের মাধ্যমে ভবন হস্তান্তরের জন্য প্রস্তুত করা হয়।",
+
+        "technical-note-title":
+            "প্রযুক্তিগত নোট:",
+
+        "technical-note":
             "এই ক্যাটালগ সাধারণ তথ্যের জন্য। মাত্রা, রিইনফোর্সমেন্ট, কংক্রিট গ্রেড, ফাউন্ডেশনের ধরন এবং অন্যান্য স্ট্রাকচারাল সিদ্ধান্ত প্রকল্পের ডিজাইন, সাইটের অবস্থা এবং প্রযোজ্য মান অনুযায়ী নির্ধারিত হবে।",
 
-        secPlans: "বাড়ির প্ল্যান ও ডিজাইন ধারণা",
+        "sec-plans":
+            "বাড়ির প্ল্যান ও ডিজাইন ধারণা",
 
-        planTitle1: "🏠 ছোট বাড়ি",
-        planDesc1: "ছোট প্লট এবং ব্যবহারিক পারিবারিক প্রয়োজনের জন্য দক্ষ পরিকল্পনা।",
+        "plan-title-1":
+            "🏠 ছোট বাড়ি",
 
-        planTitle2: "🏡 পারিবারিক বাড়ি",
-        planDesc2: "শয়নকক্ষ, বসার ঘর, ডাইনিং, রান্নাঘর এবং সার্ভিসের ভারসাম্যপূর্ণ পরিকল্পনা।",
+        "plan-desc-1":
+            "ছোট প্লট এবং ব্যবহারিক পারিবারিক প্রয়োজনের জন্য দক্ষ পরিকল্পনা।",
 
-        planTitle3: "🏢 বহুতল বাড়ি",
-        planDesc3: "G+1, G+2 এবং অন্যান্য বহুতল ভবনের পরিকল্পনা।",
+        "plan-title-2":
+            "🏡 পারিবারিক বাড়ি",
 
-        planTitle4: "📐 কাস্টম ডিজাইন",
-        planDesc4: "গ্রাহকের প্রয়োজন অনুযায়ী যোগ্য পেশাদারের মাধ্যমে প্রকল্পভিত্তিক ডিজাইন তৈরি করা যায়।",
+        "plan-desc-2":
+            "শয়নকক্ষ, বসার ঘর, ডাইনিং, রান্নাঘর এবং সার্ভিসের ভারসাম্যপূর্ণ পরিকল্পনা।",
 
-        secProjects: "আমাদের প্রকল্প",
+        "plan-title-3":
+            "🏢 বহুতল বাড়ি",
 
-        projectTitle1: "🏗 আবাসিক প্রকল্প",
-        projectDesc1: "আবাসিক নির্মাণ, সংস্কার এবং উন্নয়নমূলক কাজ।",
+        "plan-desc-3":
+            "G+1, G+2 এবং অন্যান্য বহুতল ভবনের পরিকল্পনা।",
 
-        projectTitle2: "🏫 প্রাতিষ্ঠানিক প্রকল্প",
-        projectDesc2: "স্কুল, প্রতিষ্ঠান এবং অন্যান্য সিভিল নির্মাণ কাজ।",
+        "plan-title-4":
+            "📐 কাস্টম ডিজাইন",
 
-        projectTitle3: "🏢 বাণিজ্যিক প্রকল্প",
-        projectDesc3: "বাণিজ্যিক ভবন এবং সংশ্লিষ্ট নির্মাণ কাজ।",
+        "plan-desc-4":
+            "গ্রাহকের প্রয়োজন অনুযায়ী যোগ্য পেশাদারের মাধ্যমে প্রকল্পভিত্তিক ডিজাইন তৈরি করা যায়।",
 
-        projectTitle4: "🚧 অবকাঠামো কাজ",
-        projectDesc4: "অবকাঠামো সম্পর্কিত সিভিল কাজ এবং প্রকল্প সমন্বয়।",
+        "sec-projects":
+            "আমাদের প্রকল্প",
 
-        portfolioTitle: "পোর্টফোলিও নোট:",
+        "project-title-1":
+            "আবাসিক প্রকল্প",
 
-        portfolioNote:
+        "project-desc-1":
+            "আবাসিক নির্মাণ, সংস্কার এবং উন্নয়নমূলক কাজ।",
+
+        "project-title-2":
+            "প্রাতিষ্ঠানিক প্রকল্প",
+
+        "project-desc-2":
+            "স্কুল, প্রতিষ্ঠান এবং অন্যান্য সিভিল নির্মাণ কাজ।",
+
+        "project-title-3":
+            "বাণিজ্যিক প্রকল্প",
+
+        "project-desc-3":
+            "বাণিজ্যিক ভবন এবং সংশ্লিষ্ট নির্মাণ কাজ।",
+
+        "project-title-4":
+            "অবকাঠামো কাজ",
+
+        "project-desc-4":
+            "অবকাঠামো সম্পর্কিত সিভিল কাজ এবং প্রকল্প সমন্বয়।",
+
+        "portfolio-title":
+            "পোর্টফোলিও নোট:",
+
+        "portfolio-note":
             "নাখোদার প্রকৃত প্রকল্পের ছবি এবং বিস্তারিত তথ্য ভবিষ্যতে এখানে যোগ করা হবে।",
 
-        secAbout: "নাখোদা কনস্ট্রাকশনস সম্পর্কে",
+        "sec-about":
+            "নাখোদা কনস্ট্রাকশনস সম্পর্কে",
 
-        aboutText:
+        "about-text":
             "একটি বাড়ি শুধু কংক্রিট ও স্টিল দিয়ে তৈরি হয় না। এটি জমি, পরিবার, বিশ্বাস এবং স্বপ্নের উপর গড়ে ওঠে। নাখোদা কনস্ট্রাকশনস ব্যবহারিক নির্মাণ পরিষেবা ও প্রকল্প সহায়তার মাধ্যমে নির্মাণকে আরও সহজে বোঝা, পরিকল্পনা করা এবং সমন্বয় করার লক্ষ্য রাখে।",
 
-        visionLabel: "লক্ষ্য:",
+        "vision-label":
+            "লক্ষ্য:",
 
-        visionText:
+        "vision-text":
             "ত্রিপুরা এবং তার বাইরে মানুষ ও প্রতিষ্ঠানের জন্য একটি বিশ্বস্ত নির্মাণ সহযোগী হিসেবে প্রতিষ্ঠিত হওয়া।",
 
-        secContact: "আপনার নির্মাণ যাত্রা শুরু করুন",
+        "sec-contact":
+            "আপনার নির্মাণ যাত্রা শুরু করুন",
 
-        contactIntro:
+        "contact-intro":
             "আপনার প্রকল্প সম্পর্কে আমাদের জানান। নতুন বাড়ি, বাণিজ্যিক ভবন, প্রাতিষ্ঠানিক প্রকল্প, সংস্কার বা অন্য কোনো সিভিল কাজের পরিকল্পনা করলে নাখোদা কনস্ট্রাকশনসের সঙ্গে যোগাযোগ করুন।",
 
-        contactTitle: "📞 নাখোদার সঙ্গে যোগাযোগ",
+        "contact-title":
+            "📞 নাখোদার সঙ্গে যোগাযোগ",
 
-        phoneLabel: "ফোন:",
-        emailLabel: "ইমেইল:",
-        addressLabel: "অফিস:",
+        "phone-label":
+            "ফোন:",
 
-        addressText:
+        "email-label":
+            "ইমেইল:",
+
+        "address-label":
+            "অফিস:",
+
+        "address-text":
             "দুর্গা চৌমুহনী, আলবার্ট ক্লাবের কাছে, আগরতলা, পশ্চিম ত্রিপুরা",
 
-        footerText:
+        "footer-text":
             "নির্মাণ • পরিকল্পনা • তদারকি • অবকাঠামো"
+
     },
 
 
     kb: {
 
-        brandName: "Nakhoda Constructions",
+        "brand-name":
+            "Nakhoda Constructions",
 
-        brandTagline:
+        "brand-tagline":
             "MERI MITTI • MERI ZAMEEN • MERA GHAR",
 
-        heroTitle:
+        "hero-title":
             "BUILD • PLAN • SUPERVISE<br>Nwngni Nokni Nwngni Jibonko Nokni.",
 
-        mainIntro:
-            "Nakhoda Constructions ni residential, commercial, institutional aro infrastructure construction khomokha — planning ni, estimation ni, execution aro finishing ni.",
+        "hero-subtitle":
+            "Nwngni land, requirement aro dream ni based practical construction solution.",
 
-        secServices: "Chini Services",
+        "main-intro":
+            "Residential, commercial, institutional aro infrastructure construction khomokha — planning, estimation, execution aro finishing ni complete construction support.",
 
-        srvTitle1: "🏠 Building Construction",
-        srvDesc1: "Residential, commercial aro institutional building construction.",
+        "feature-title":
+            "Nwngni Jomi. Nwngni Dream. Chini Responsibility.",
 
-        srvTitle2: "📐 Planning & Estimation",
-        srvDesc2: "Concept planning, quantity estimation, budget aro project coordination.",
+        "feature-text":
+            "First idea ni thake final handover porjonto Nakhoda Constructions practical coordination, construction support aro quality-focused execution ni importance dei.",
 
-        srvTitle3: "🏗 Civil & RCC Works",
-        srvDesc3: "Foundation, column, beam, slab, masonry, plaster aro civil works.",
+        "sec-services":
+            "Chini Services",
 
-        srvTitle4: "👷 Site Supervision",
-        srvDesc4: "Labour coordination, progress monitoring aro quality supervision.",
+        "srv-title-1":
+            "🏠 Building Construction",
 
-        srvTitle5: "🔧 Renovation",
-        srvDesc5: "Old building repair, extension, alteration aro remodelling.",
+        "srv-desc-1":
+            "Residential, commercial aro institutional building construction.",
 
-        srvTitle6: "🏢 Infrastructure Works",
-        srvDesc6: "Institutional aro infrastructure-related civil construction works.",
+        "srv-title-2":
+            "📐 Planning & Estimation",
 
-        secCatalogue: "Construction Catalogue",
+        "srv-desc-2":
+            "Concept planning, quantity estimation, budget aro project coordination.",
 
-        catTitle1: "🏡 Residential",
-        catDesc1: "<strong>House Designs:</strong> Modern concept, elevation aro practical house layout.",
+        "srv-title-3":
+            "🏗 Civil & RCC Works",
 
-        catTitle2: "🏗 Structure",
-        catDesc2: "<strong>Foundation & RCC:</strong> Foundation, reinforcement, column, beam aro slab system.",
+        "srv-desc-3":
+            "Foundation, column, beam, slab, masonry, plaster aro civil works.",
 
-        catTitle3: "🧱 Masonry",
-        catDesc3: "<strong>Brick & Block Work:</strong> Wall construction, mortar, alignment, opening aro curing.",
+        "srv-title-4":
+            "👷 Site Supervision",
 
-        catTitle4: "🎨 Finishing",
-        catDesc4: "<strong>Flooring & Painting:</strong> Flooring, wall finish, painting aro final finishing.",
+        "srv-desc-4":
+            "Labour coordination, progress monitoring aro quality supervision.",
 
-        catTitle5: "💧 Waterproofing",
-        catDesc5: "<strong>Roof & Wet Areas:</strong> Roof, wet area aro moisture-control solution.",
+        "srv-title-5":
+            "🔧 Renovation",
 
-        catTitle6: "⚡ Electrical & Plumbing",
-        catDesc6: "<strong>Building Services:</strong> Electrical aro plumbing system construction sequence ni coordinate kora.",
+        "srv-desc-5":
+            "Old building repair, extension, alteration aro remodelling.",
 
-        catTitle7: "🪟 Doors & Windows",
-        catDesc7: "<strong>Openings:</strong> Door-window opening planning aro practical selection.",
+        "srv-title-6":
+            "🏢 Infrastructure Works",
 
-        catTitle8: "🏢 Commercial & Institutional",
-        catDesc8: "<strong>Facilities:</strong> Office, school aro institutional building reference.",
+        "srv-desc-6":
+            "Institutional aro infrastructure-related civil construction works.",
 
-        secTechniques: "Building Techniques",
+        "sec-catalogue":
+            "Construction Catalogue",
 
-        techTitle1: "01 — Site & Setting Out",
-        techDesc1: "Excavation agor site condition, level, boundary aro approved layout bujha important.",
+        "cat-title-1":
+            "🏡 Residential",
 
-        techTitle2: "02 — Foundation",
-        techDesc2: "Soil condition aro structural design onujayi excavation aro foundation construction kora hoy.",
+        "cat-desc-1":
+            "<strong>House Designs:</strong> Modern concept, elevation aro practical house layout.",
 
-        techTitle3: "03 — RCC Frame",
-        techDesc3: "Drawing onujayi reinforcement, formwork aro concrete diye structural member kora hoy.",
+        "cat-title-2":
+            "🏗 Structure",
 
-        techTitle4: "04 — Masonry",
-        techDesc4: "Suitable brick/block, mortar, alignment, opening aro curing use kore wall construction kora hoy.",
+        "cat-desc-2":
+            "<strong>Foundation & RCC:</strong> Foundation, reinforcement, column, beam aro slab system.",
 
-        techTitle5: "05 — Services",
-        techDesc5: "Electrical, plumbing, drainage aro other services finishing agote coordinate kora hoy.",
+        "cat-title-3":
+            "🧱 Masonry",
 
-        techTitle6: "06 — Waterproofing",
-        techDesc6: "Moisture-prone area ni suitable waterproofing system aro proper surface preparation use kora hoy.",
+        "cat-desc-3":
+            "<strong>Brick & Block Work:</strong> Wall construction, mortar, alignment, opening aro curing.",
 
-        techTitle7: "07 — Finishing",
-        techDesc7: "Plaster, flooring, painting, door, window, fixture aro final quality checking complete kora hoy.",
+        "cat-title-4":
+            "🎨 Finishing",
 
-        techTitle8: "08 — Handover",
-        techDesc8: "Final inspection, cleaning, defect correction aro documentation complete kore handover kora hoy.",
+        "cat-desc-4":
+            "<strong>Flooring & Painting:</strong> Flooring, wall finish, painting aro final finishing.",
 
-        technicalNoteTitle: "Technical Note:",
+        "cat-title-5":
+            "💧 Waterproofing",
 
-        technicalNote:
+        "cat-desc-5":
+            "<strong>Roof & Wet Areas:</strong> Roof, wet area aro moisture-control solution.",
+
+        "cat-title-6":
+            "⚡ Electrical & Plumbing",
+
+        "cat-desc-6":
+            "<strong>Building Services:</strong> Electrical aro plumbing system construction sequence ni coordinate kora.",
+
+        "cat-title-7":
+            "🪟 Doors & Windows",
+
+        "cat-desc-7":
+            "<strong>Openings:</strong> Door-window opening planning aro practical selection.",
+
+        "cat-title-8":
+            "🏢 Commercial & Institutional",
+
+        "cat-desc-8":
+            "<strong>Facilities:</strong> Office, school aro institutional building reference.",
+
+        "sec-techniques":
+            "Building Techniques",
+
+        "tech-title-1":
+            "01 — Site & Setting Out",
+
+        "tech-desc-1":
+            "Excavation agor site condition, level, boundary aro approved layout bujha important.",
+
+        "tech-title-2":
+            "02 — Foundation",
+
+        "tech-desc-2":
+            "Soil condition aro structural design onujayi excavation aro foundation construction kora hoy.",
+
+        "tech-title-3":
+            "03 — RCC Frame",
+
+        "tech-desc-3":
+            "Drawing onujayi reinforcement, formwork aro concrete diye structural member kora hoy.",
+
+        "tech-title-4":
+            "04 — Masonry",
+
+        "tech-desc-4":
+            "Suitable brick/block, mortar, alignment, opening aro curing use kore wall construction kora hoy.",
+
+        "tech-title-5":
+            "05 — Services",
+
+        "tech-desc-5":
+            "Electrical, plumbing, drainage aro other services finishing agote coordinate kora hoy.",
+
+        "tech-title-6":
+            "06 — Waterproofing",
+
+        "tech-desc-6":
+            "Moisture-prone area ni suitable waterproofing system aro proper surface preparation use kora hoy.",
+
+        "tech-title-7":
+            "07 — Finishing",
+
+        "tech-desc-7":
+            "Plaster, flooring, painting, door, window, fixture aro final quality checking complete kora hoy.",
+
+        "tech-title-8":
+            "08 — Handover",
+
+        "tech-desc-8":
+            "Final inspection, cleaning, defect correction aro documentation complete kore handover kora hoy.",
+
+        "technical-note-title":
+            "Technical Note:",
+
+        "technical-note":
             "I catalogue general information ni. Structural dimension, reinforcement, concrete grade, foundation type aro other structural decision project design, site condition aro applicable standard onujayi hobo.",
 
-        secPlans: "House Plans & Design Concepts",
+        "sec-plans":
+            "House Plans & Design Concepts",
 
-        planTitle1: "🏠 Compact Homes",
-        planDesc1: "Small plot aro practical family requirement ni efficient planning.",
+        "plan-title-1":
+            "🏠 Compact Homes",
 
-        planTitle2: "🏡 Family Homes",
-        planDesc2: "Bedroom, living, dining, kitchen aro service ni balanced planning.",
+        "plan-desc-1":
+            "Small plot aro practical family requirement ni efficient planning.",
 
-        planTitle3: "🏢 Multi-Floor Homes",
-        planDesc3: "G+1, G+2 aro other multi-level building planning.",
+        "plan-title-2":
+            "🏡 Family Homes",
 
-        planTitle4: "📐 Custom Concepts",
-        planDesc4: "Customer requirement qualified professional ni project-specific design kora jabo.",
+        "plan-desc-2":
+            "Bedroom, living, dining, kitchen aro service ni balanced planning.",
 
-        secProjects: "Chini Projects",
+        "plan-title-3":
+            "🏢 Multi-Floor Homes",
 
-        projectTitle1: "🏗 Residential Projects",
-        projectDesc1: "Residential construction, renovation aro improvement works.",
+        "plan-desc-3":
+            "G+1, G+2 aro other multi-level building planning.",
 
-        projectTitle2: "🏫 Institutional Projects",
-        projectDesc2: "School, institutional aro other civil construction works.",
+        "plan-title-4":
+            "📐 Custom Concepts",
 
-        projectTitle3: "🏢 Commercial Projects",
-        projectDesc3: "Commercial building aro related construction works.",
+        "plan-desc-4":
+            "Customer requirement qualified professional ni project-specific design kora jabo.",
 
-        projectTitle4: "🚧 Infrastructure Works",
-        projectDesc4: "Infrastructure-related civil work aro project coordination.",
+        "sec-projects":
+            "Chini Projects",
 
-        portfolioTitle: "Portfolio Note:",
+        "project-title-1":
+            "Residential Projects",
 
-        portfolioNote:
+        "project-desc-1":
+            "Residential construction, renovation aro improvement works.",
+
+        "project-title-2":
+            "Institutional Projects",
+
+        "project-desc-2":
+            "School, institutional aro other civil construction works.",
+
+        "project-title-3":
+            "Commercial Projects",
+
+        "project-desc-3":
+            "Commercial building aro related construction works.",
+
+        "project-title-4":
+            "Infrastructure Works",
+
+        "project-desc-4":
+            "Infrastructure-related civil work aro project coordination.",
+
+        "portfolio-title":
+            "Portfolio Note:",
+
+        "portfolio-note":
             "Nakhoda ni genuine project photo aro project details future ni ekhane add kora hobo.",
 
-        secAbout: "Nakhoda Constructions somporke",
+        "sec-about":
+            "Nakhoda Constructions somporke",
 
-        aboutText:
+        "about-text":
             "Nok ekta concrete aro steel ni matro banano noy. Nok land, family, trust aro dream ni build hoy. Nakhoda Constructions practical construction service aro project support diye construction bujha, plan aro coordinate kora easy korte chai.",
 
-        visionLabel: "Vision:",
+        "vision-label":
+            "Vision:",
 
-        visionText:
+        "vision-text":
             "Tripura aro Tripura-r bahire manush aro institution ni trusted construction partner hote chai.",
 
-        secContact:
+        "sec-contact":
             "Nwngni Construction Journey Start Koro",
 
-        contactIntro:
+        "contact-intro":
             "Nwngni project somporke amade janai. New house, commercial building, institutional project, renovation ba other civil work plan korle Nakhoda Constructions ni contact koro.",
 
-        contactTitle: "📞 Nakhoda ni Contact",
+        "contact-title":
+            "📞 Nakhoda ni Contact",
 
-        phoneLabel: "Phone:",
-        emailLabel: "Email:",
-        addressLabel: "Office:",
+        "phone-label":
+            "Phone:",
 
-        addressText:
+        "email-label":
+            "Email:",
+
+        "address-label":
+            "Office:",
+
+        "address-text":
             "Durga Chowmuhani, Albert Club ni near, Agartala, West Tripura",
 
-        footerText:
+        "footer-text":
             "Construction • Planning • Supervision • Infrastructure"
+
     }
 
 };
 
 
+/* LANGUAGE SWITCH */
+
 function switchLang(lang) {
 
-    const t = translations[lang];
+    const translation = translations[lang];
 
-    if (!t) {
+    if (!translation) {
         return;
     }
 
-    Object.keys(t).forEach(function(key) {
+    Object.keys(translation).forEach(function(id) {
 
-        const element = document.getElementById(key);
+        const element = document.getElementById(id);
 
         if (element) {
-            element.innerHTML = t[key];
+            element.innerHTML = translation[id];
         }
 
     });
@@ -1195,18 +1962,21 @@ function switchLang(lang) {
 
     buttons.forEach(function(button) {
 
-        if (
-            (lang === "en" && button.textContent.trim() === "English") ||
-            (lang === "bn" && button.textContent.trim() === "বাংলা") ||
-            (lang === "kb" && button.textContent.trim() === "Kokborok")
-        ) {
+        if (button.getAttribute("onclick") === "switchLang('" + lang + "')") {
+
             button.classList.add("active");
+
         }
 
     });
 
+
+    document.documentElement.lang = lang;
+
 }
 
+
+/* DEFAULT LANGUAGE */
 
 switchLang("en");
 
